@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "priority": 0,
+            "name": "HEMATOLOGI",
+            "iconUrl": "",
+            "servicePrerequisites": []
+        },
+        {
+            "priority": 0,
+            "name": "UMUM",
+            "iconUrl": "",
+            "servicePrerequisites": [
+                "Pastikan kondisi tubuh dalam keadaan prima."
+            ]
+        },
+        {
+            "priority": 0,
+            "name": "KIMIA KLINIK",
+            "iconUrl": "",
+            "servicePrerequisites": []
+        },
+        {
+            "priority": 0,
+            "name": "IMUNOLOGI",
+            "iconUrl": "",
+            "servicePrerequisites": []
+        }
+    ],
+    "meta": {}
+}

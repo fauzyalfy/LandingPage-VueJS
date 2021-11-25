@@ -17,52 +17,16 @@
         <div class="main">
           <p class="title3">Kategori Pemeriksaan</p>
           <v-row>
-            <v-col lg="3">
+            <v-col lg="3" v-for="item in Mykategori.data" :key="item.id">
               <div class="urine">
                 <img
-                  src="https://content.periksain.id/display-group/2a959fe0-7ef1-4cc4-b08c-b9930a1cdf41/230180.png"
+                  :src="item.iconUrl"
                   alt=""
                   width="25%"
                   height="55%"
-                  style="margin-top: 14px; margin-left: 20px"
+                  style="margin-top: 14px; margin-left: 10px"
                 />
-                <p class="darah">DARAH</p>
-              </div>
-            </v-col>
-            <v-col lg="3">
-              <div class="gula">
-                <img
-                  src="https://content.periksain.id/display-group/3741f88e-8022-417e-85c8-26bfeff17f63/PCR2 (1).png"
-                  alt=""
-                  width="20%"
-                  height="55%"
-                  style="margin-top: 14px; margin-left: 20px"
-                />
-                <p class="title4">SWAB PCR</p>
-              </div>
-            </v-col>
-            <v-col lg="3">
-              <div class="antigen">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/layout/home/pcr-removebg-preview.png"
-                  alt=""
-                  width="45%"
-                  height="55%"
-                  style="margin-top: 14px"
-                />
-                <p class="anti">ANTIGEN</p>
-              </div>
-            </v-col>
-            <v-col lg="3">
-              <div class="paru">
-                <img
-                  src="https://content.periksain.id/display-group/c1fc0754-8a11-46fb-b308-8d17f502744b/kissclipart-urine-test-png-clipart-clinical-urine-tests-comput-defb38fcbc7d6ecf.png"
-                  alt=""
-                  width="30%"
-                  height="55%"
-                  style="margin-top: 14px; margin-left: 20px"
-                />
-                <p class="title4">URIN</p>
+                <p class="darah">{{ item.name }}</p>
               </div>
             </v-col>
           </v-row>
@@ -95,20 +59,20 @@
         </div>
       </v-col>
       <v-col lg="12"></v-col>
-      <v-col lg="3">
+      <v-col lg="3" v-for="items in Myresponse.data" :key="items.id">
         <v-card class="mx-auto" max-width="344">
           <v-card-text>
             <div class="promo">Promo</div>
             <div class="promo2">Terkoneksi PeduliLindungi</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
+            <p class="text-h5 text--primary">{{ items.name }}</p>
             <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 310000
+              RP {{ items.marginPrice }}
             </p>
             <p class="disc">50%</p>
             <v-row>
               <v-col lg="3">
                 <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/12/lab-logo/lab 7 logo.png"
+                  :src="items.laboratoryLogo"
                   alt=""
                   height="40"
                   width="50"
@@ -125,8 +89,8 @@
                   />
                 </div>
               </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
+              <v-col lg="6">
+                <p class="loc">{{ items.city }}</p>
               </v-col>
             </v-row>
           </v-card-text>
@@ -144,535 +108,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <div class="promo2">Terkoneksi PeduliLindungi</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 310000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="4">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/2/lab-logo/lab 2 logo.jpeg"
-                  alt=""
-                  height="40"
-                  width="100"
-                />
-              </v-col>
-              <v-col lg="4">
-                <div class="map2">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 315000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="4">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/4/lab-logo/lab 4 logo.png"
-                  alt=""
-                  height="40"
-                  width="100"
-                />
-              </v-col>
-              <v-col lg="4">
-                <div class="map2">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 340000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="3">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/14/lab-logo/lab 9 logo.png"
-                  alt=""
-                  height="40"
-                  width="50"
-                />
-              </v-col>
-              <v-col lg="3">
-                <div class="map">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 365000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="4">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/16/lab-logo/lab 13 logo.png"
-                  alt=""
-                  height="40"
-                  width="100"
-                />
-              </v-col>
-              <v-col lg="4">
-                <div class="map2">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 305000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="4">
-                <img
-                  src="https://content.periksain.id/laboratory/20/lab-logo/mIhVIED04X1630909828.png"
-                  alt=""
-                  height="40"
-                  width="100"
-                />
-              </v-col>
-              <v-col lg="4">
-                <div class="map2">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">Antigen SARS-CoV-2</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 145000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="4">
-                <img
-                  src="https://content.periksain.id/laboratory/19/lab-logo/xUimqbKLnQ1630469318.jpg"
-                  alt=""
-                  height="40"
-                  width="100"
-                />
-              </v-col>
-              <v-col lg="4">
-                <div class="map2">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">PCR Covid-19</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 345000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="3">
-                <img
-                  src="https://content.periksain.id/laboratory/24/lab-logo/naraya2.jpg"
-                  alt=""
-                  height="40"
-                  width="60"
-                />
-              </v-col>
-              <v-col lg="3">
-                <div class="map">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">SGOT</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 72000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="3">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/14/lab-logo/lab 9 logo.png"
-                  alt=""
-                  height="40"
-                  width="50"
-                />
-              </v-col>
-              <v-col lg="3">
-                <div class="map">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">Total Cholesterol</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 72000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="3">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/14/lab-logo/lab 9 logo.png"
-                  alt=""
-                  height="40"
-                  width="50"
-                />
-              </v-col>
-              <v-col lg="3">
-                <div class="map">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">Urine Lengkap</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 72000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="3">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/14/lab-logo/lab 9 logo.png"
-                  alt=""
-                  height="40"
-                  width="50"
-                />
-              </v-col>
-              <v-col lg="3">
-                <div class="map">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col lg="3">
-        <v-card class="mx-auto" max-width="344">
-          <v-card-text>
-            <div class="promo">Promo</div>
-            <p class="text-h5 text--primary">Lekosit</p>
-            <p class="text-h5 text--primary" style="font-weight: bold">
-              RP 54000
-            </p>
-            <p class="disc">50%</p>
-            <v-row>
-              <v-col lg="3">
-                <img
-                  src="https://storage.googleapis.com/periksain-legacy/laboratory/14/lab-logo/lab 9 logo.png"
-                  alt=""
-                  height="40"
-                  width="50"
-                />
-              </v-col>
-              <v-col lg="3">
-                <div class="map">
-                  <img
-                    src="./../assets/maps.png"
-                    alt=""
-                    width="30"
-                    height="30"
-                    style="margin-top: 2px"
-                  />
-                </div>
-              </v-col>
-              <v-col lg="4">
-                <p class="loc">Surabaya</p>
-              </v-col>
-            </v-row>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text color="blue darken-1"> Lihat Detail </v-btn>
-            <v-btn
-              depressed
-              rounded
-              small
-              class="btn-1"
-              style="margin-left: 75px"
-            >
-              <v-icon color="white">mdi-cart</v-icon>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
+
       <v-col lg="12"></v-col>
       <v-col lg="12">
         <v-btn x-large rounded class="btn-s">Selanjutnya</v-btn>
@@ -757,8 +193,16 @@
   </v-container>
 </template>
 <script>
+import kategori from "../assets/KategoriPemeriksaan.json";
+import response from "../assets/ResponsePemeriksaan.json";
 export default {
   name: "Content",
+  data() {
+    return {
+      Mykategori: kategori,
+      Myresponse: response,
+    };
+  },
 };
 </script>
 <style scoped>
@@ -800,9 +244,9 @@ export default {
 .urine {
   border-radius: 15px;
   border: 1px solid #dfdfdf;
-  width: 9vw;
+  width: 12vw;
   height: 9vh;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .antigen {
   border-radius: 15px;
@@ -891,16 +335,9 @@ export default {
   text-align: center;
   border-radius: 5px;
 }
-.map2 {
-  background-color: #f5f5f5;
-  width: 2vw;
-  height: 5vh;
-  text-align: center;
-  border-radius: 5px;
-  margin-left: 20px;
-}
+
 .loc {
-  font-size: 20px;
+  font-size: 15px;
   margin-left: -20px;
   margin-top: 5px;
 }
