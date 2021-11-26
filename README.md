@@ -1,4 +1,4 @@
-# web1
+# Landing Page using Vue.JS
 
 ## Project setup
 ```
