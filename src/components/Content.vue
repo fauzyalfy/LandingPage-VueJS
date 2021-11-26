@@ -24,7 +24,7 @@
                   alt=""
                   width="25%"
                   height="55%"
-                  style="margin-top: 14px; margin-left: 10px"
+                  style="margin-top: 22px; margin-left: 20px"
                 />
                 <p class="darah">{{ item.name }}</p>
               </div>
@@ -193,8 +193,8 @@
   </v-container>
 </template>
 <script>
-import kategori from "../assets/KategoriPemeriksaan.json";
-import response from "../assets/ResponsePemeriksaan.json";
+import kategori from "../assets/json/KategoriPemeriksaan.json";
+import response from "../assets/json/ResponsePemeriksaan.json";
 export default {
   name: "Content",
   data() {
@@ -248,29 +248,7 @@ export default {
   height: 9vh;
   margin-left: 20px;
 }
-.antigen {
-  border-radius: 15px;
-  border: 1px solid #dfdfdf;
-  width: 10vw;
-  height: 9vh;
-  margin-left: 30px;
-}
-.gula {
-  border-radius: 15px;
-  border: 1px solid #dfdfdf;
-  width: 12vw;
-  height: 9vh;
-  margin-left: 10px;
-}
-.paru {
-  border-radius: 15px;
-  border: 1px solid #dfdfdf;
-  width: 9vw;
-  height: 9vh;
-  margin-left: 10px;
-}
 .search {
-  /* border: 1px solid #dfdfdf; */
   width: 18vw;
 }
 .input {
